@@ -107,11 +107,11 @@ class DB{
         // 使用 PDO 類別的 exec 方法執行最終生成的 SQL 語句，實現資料刪除
         return $this->pdo->exec($sql);
     }
-    // -------------------------------------------------------------
+    // -------------------------q------------------------------------
     function q($sql){
         return $this->pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
     }
-    // -----------------------------------------------------------
+    // ------------------a2s-----------------------------------------
     private function a2s($array){
         // 用於存儲欄位和值的陣列
         foreach ($array as $col => $value) {
@@ -120,6 +120,7 @@ class DB{
         }
         return $tmp;// 返回包含所有轉換後欄位和值的陣列
     }
+    // ---------------------sql_all-------------------------------
     private function sql_all($sql,$array,$other){
         // 檢查是否有指定資料表名稱
         if (isset($this->table) && !empty($this->table)) {
