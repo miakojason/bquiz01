@@ -1,11 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0048)?do=admin -->
+<!-- saved from url=(0055)?do=meg -->
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title>卓越科技大學校園資訊系統</title>
-<link href="./Administrator Login_files/css.css" rel="stylesheet" type="text/css">
-<script src="./Administrator Login_files/jquery-1.9.1.min.js"></script>
-<script src="./Administrator Login_files/js.js"></script>
+<link href="./css/css.css" rel="stylesheet" type="text/css">
+<script src="./js/jquery-1.9.1.min.js"></script>
+<script src="./js/js.js"></script>
 </head>
 
 <body>
@@ -34,13 +34,11 @@
                     	                    </marquee>
                     <div style="height:32px; display:block;"></div>
                                         <!--正中央-->
-                                            		<form method="post" action="?do=check" target="back">
-                        	    	<p class="t botli">管理員登入區</p>
-                        			<p class="cent">帳號 ： <input name="acc" autofocus="" type="text"></p>
-                        	        <p class="cent">密碼 ： <input name="ps" type="password"></p>
-                        	        <p class="cent"><input value="送出" type="submit"><input type="reset" value="清除"></p>
-                        	    </form>
-                        	                </div>
+                        <div style="text-align:center;">
+    <a class="bl" style="font-size:30px;" href="?do=meg&p=0">&lt;&nbsp;</a>
+        <a class="bl" style="font-size:30px;" href="?do=meg&p=0">&nbsp;&gt;</a>
+    </div>
+	                </div>
                 <div id="alt" style="position: absolute; width: 350px; min-height: 100px; word-break:break-all; text-align:justify;  background-color: rgb(255, 255, 204); top: 50px; left: 400px; z-index: 99; display: none; padding: 5px; border: 3px double rgb(255, 153, 0); background-position: initial initial; background-repeat: initial initial;"></div>
                     	<script>
 						$(".sswww").hover(
@@ -59,7 +57,7 @@
                         </script>
                                  <div class="di di ad" style="height:540px; width:23%; padding:0px; margin-left:22px; float:left; ">
                 	<!--右邊-->   
-                	<button style="width:100%; margin-left:auto; margin-right:auto; margin-top:2px; height:50px;" onclick="lo(&#39;?do=admin&#39;)">管理登入</button>
+                	<button style="width:100%; margin-left:auto; margin-right:auto; margin-top:2px; height:50px;" onclick="lo(&#39;?do=admin&#39;)">回後台管理</button>
                 	<div style="width:89%; height:480px;" class="dbor">
                     	<span class="t botli">校園映象區</span>
 						                        <script>
