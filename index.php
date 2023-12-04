@@ -30,9 +30,29 @@
                     </div>
         		</div>
                <!--front-main-start-->
+			   <?php //include "./front/main.php"; ?>
 			   <?php
-			   include "./front/main.php";
-			   ?>
+			    // $do=(isset($_GET['do']))?$_GET['do']:'main';
+				// $do=$_GET['do']??'main';
+				//  include "./front/$do.php";
+			 $do=$_GET['do']??'main';
+			 $file = "./front/{$do}.php";
+			if (file_exists($file)) {
+			    include $file;
+			} else {
+    		include "./front/main.php";
+			}
+				// switch($do){
+				// 	case "$do" ;
+				// 	include "./front/$do.php";
+				// 	break;
+				// 	// case "news" ;
+				// 	// include "./front/news.php";
+				// 	// break;
+				// 	default:
+				// 	include "./front/main.php";
+				//    }
+				?>
 			   <!--front-main-end-->
                 <div id="alt" style="position: absolute; width: 350px; min-height: 100px; word-break:break-all; text-align:justify;  background-color: rgb(255, 255, 204); top: 50px; left: 400px; z-index: 99; display: none; padding: 5px; border: 3px double rgb(255, 153, 0); background-position: initial initial; background-repeat: initial initial;"></div>
                     	<script>
