@@ -7,7 +7,7 @@
                 <tr class="yel">
                     <td width="50%">頁尾版權資料:</td>                         <!-- find()查找id為1的total -->
                     <td width="50%"><input type="text" name="bottom" value="<?=$Bottom->find(1)['bottom']?>"></td>
-                    <input type="hidden" name="table"  value="bottom">
+                    <input type="hidden" name="table"  value="<?=$do?>">
                 </tr>
             </tbody>
         </table>
