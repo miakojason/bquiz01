@@ -11,7 +11,7 @@
                     <td></td>
                 </tr>
                 <?php
-                $rows=$Title->all();
+                $rows=$DB->all();
                 foreach($rows as $row){
                 ?>
                 <tr>
@@ -19,7 +19,8 @@
                         <img src="./img/<?=$row['img'];?>" style="width:300px;height:30px;">
                     </td>
                     <td width="23%">
-                        <input type="text" name="text[<?=$row['id'];?>]" style="width:90%;" value="<?=$row['text'];?>" >
+                        <input type="text" name="text[]" style="width:90%;" value="<?=$row['text'];?>" >
+                        <input type="hidden" name="id[]" value="<?=$row['id'];?>">
                     </td>
                     <td width="7%">                          <!-- ($row['sh']==1)?'checked':''; 保持顯示勾勾-->
                         <input type="radio" name="sh" value="<?=$row['id'];?>"<?=($row['sh']==1)?'checked':'';?>>
