@@ -13,9 +13,9 @@ class DB{
         $this->pdo = new PDO($this->dsn, 'root', '');//本機端
     }
      // -------------------all--------------------------------------------
-    function all($where = '', $other = ''){
+    function all( $where = '', $other = ''){
         $sql = "select * from `$this->table` ";
-        $sql=$this->sql_all($sql,$where,$other);
+        $sql =$this->sql_all($sql,$where,$other);
         return $this->pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
     }
      // -----------------count---------------------------------
