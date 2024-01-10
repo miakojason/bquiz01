@@ -77,7 +77,7 @@ class DB{
     function count( $where = '', $other = ''){
         $sql = "select count(*) from `$this->table` ";
         $sql=$this->sql_all($sql,$where,$other);
-        return $this->q($sql);}
+        return $this->pdo->query($sql)->fetchColumn();}
     private function math($math,$col,$array='',$other=''){
         $sql = "select $math(`$col`) from `$this->table` ";
         $sql=$this->sql_all($sql,$array,$other);

@@ -2,15 +2,15 @@
 date_default_timezone_set("Asia/Taipei");
 session_start();
 class DB{
-    // protected $dsn = "mysql:host=localhost;charset=utf8;dbname=db08";//遠端
-    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=db08";//本機端
+    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=s1120408";//遠端
+    // protected $dsn = "mysql:host=localhost;charset=utf8;dbname=db08";//本機端
     protected $pdo;
     protected $table;
     // -------------------- __construct-------------------------------------------------
     public function __construct($table){
         $this->table = $table;
-        // $this->pdo = new PDO($this->dsn, 's1120408', 's1120408');//遠端
-        $this->pdo = new PDO($this->dsn, 'root', '');//本機端
+        $this->pdo = new PDO($this->dsn, 's1120408', 's1120408');//遠端
+        // $this->pdo = new PDO($this->dsn, 'root', '');//本機端
     }
      // -------------------all--------------------------------------------
     function all( $where = '', $other = ''){
