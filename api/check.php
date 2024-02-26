@@ -1,5 +1,6 @@
 <?php
 include_once "./db.php";
+//' OR 1=1; <=SQL注入 隱碼攻擊
 //過濾表單資料
 $acc=htmlspecialchars($_POST['acc']);
 $pw=htmlspecialchars($_POST['pw']);
