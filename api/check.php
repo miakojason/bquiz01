@@ -1,8 +1,10 @@
 <?php
 include_once "./db.php";
-
-if($Admin->count(['acc'=>$_POST['acc'],'pw'=>$_POST['pw']])>0){
-    $_SESSION['login']=$_POST['acc'];
+//過濾表單資料
+$acc=htmlspecialchars($_POST['acc']);
+$pw=htmlspecialchars($_POST['pw']);
+if($Admin->count(['acc'=>$acc,'pw'=>$pw])>0){
+    $_SESSION['login']=$acc;
     to("../back.php?do=title");
 }else{
     to("../index.php?do=login&error=帳號密碼或錯誤");
