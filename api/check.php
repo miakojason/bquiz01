@@ -5,7 +5,7 @@ include_once "./db.php";
 // $acc=htmlspecialchars($_POST['acc']);
 // $pw=htmlspecialchars($_POST['pw']);
 //改為從源頭DB解決
-if($Admin->count(['acc'=>$_POST['acc'],'pw'=>$_POST['pw']])>0){
+if($Admin->count(['acc'=>$_POST['acc'],'pw'=>md5($_POST['pw'])])>0){
     $_SESSION['login']=$_POST['acc'];
     to("../back.php?do=title");
 }else{

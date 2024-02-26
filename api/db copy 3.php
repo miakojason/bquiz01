@@ -128,8 +128,6 @@ class DB
     {
         // 用於存儲欄位和值的陣列
         foreach ($array as $col => $value) {
-            //檢查變數是否有特殊符號
-            $value = $this->check($value);
             // 將每個欄位和值轉換成形如 "`欄位名`='值'" 的格式，並存入 $tmp 陣列中
             $tmp[] = "`$col`='$value'";
         }
@@ -160,12 +158,6 @@ class DB
         } else {
             echo "錯誤:沒有指定的資料表名稱";
         }
-    }
-    /**檢查及處理所有的參數 */
-    function check($arg)
-    {
-        $arg = htmlspecialchars($arg);
-        return $arg;
     }
 }
 

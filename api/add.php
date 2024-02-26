@@ -14,6 +14,8 @@ move_uploaded_file($_FILES['img']['tmp_name'],"../img/".$_FILES['img']['name']);
 
 if($table != 'admin'){
     $_POST['sh']=($table=='title')?0:1;
+}else{
+    $_POST['pw']=md5($_POST['pw']);
 }
 
 
