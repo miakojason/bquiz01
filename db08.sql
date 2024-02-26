@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2024-01-10 00:58:25
+-- 產生時間： 2024-02-15 09:19:17
 -- 伺服器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.2.12
 
@@ -38,9 +38,11 @@ CREATE TABLE `ad` (
 --
 
 INSERT INTO `ad` (`id`, `text`, `sh`) VALUES
-(1, 'BBBBBBBBBBBBBB', 1),
+(1, 'BBBBBBBBBBBBBB', 0),
 (2, '轉知臺北教育大學與臺灣師大合辦第11屆麋研齋全國硬筆書法比賽活動', 0),
-(5, '欣榮圖書館101年悅讀達人徵文比賽，歡迎全校師生踴躍投稿參加', 1);
+(5, '欣榮圖書館101年悅讀達人徵文比賽，歡迎全校師生踴躍投稿參加', 0),
+(8, '大悲咒', 1),
+(9, '南無喝囉怛那哆囉夜耶．南無阿唎耶，婆盧羯帝爍缽囉耶．菩提薩埵婆耶． 摩訶薩埵婆耶．摩訶迦盧尼迦耶．唵，薩皤囉罰曳．數怛那怛寫．南無 悉吉慄埵伊蒙阿唎耶．婆盧吉帝室佛囉愣馱婆．南無那囉謹墀．醯利摩訶 皤哆沙咩．  薩婆阿他豆輸朋，阿逝孕，薩婆薩哆那摩婆薩哆，那摩婆伽，摩罰特豆． 怛姪他．唵，阿婆盧醯．盧迦帝．迦羅帝．夷醯唎．摩訶菩提薩埵， 薩婆薩婆．摩囉摩囉，摩醯摩醯唎馱孕．俱盧俱盧羯蒙．度盧度盧罰闍耶帝． 摩訶罰闍耶帝．陀囉陀囉．地唎尼．室佛囉耶．  遮囉遮囉．摩麼罰摩囉．穆帝隸．伊醯伊醯．室那室那．阿囉參佛囉舍利． 罰沙罰參．佛囉舍耶．呼嚧呼嚧摩囉．呼嚧呼嚧醯利．娑囉娑囉，悉唎悉唎． 蘇嚧蘇嚧．  菩提夜菩提夜．菩馱夜菩馱夜．彌帝唎夜．那囉謹墀．地利瑟尼那．波夜摩那 ．娑婆訶．悉陀夜．娑婆訶．摩訶悉陀夜．娑婆訶．悉陀喻藝．室皤囉耶． 娑婆訶．那囉謹墀．娑婆訶．摩囉那囉．娑婆訶．悉囉僧阿穆佉耶，娑婆訶． 娑婆摩訶阿悉陀夜．娑婆訶．  者吉囉阿悉陀夜．娑婆訶．波陀摩羯悉陀夜．娑婆訶．那囉謹墀皤伽囉耶． 娑婆訶．摩婆利勝羯囉夜．娑婆訶．南無喝囉怛那哆囉夜耶，南無阿唎耶． 婆嚧吉帝．爍皤囉夜．娑婆訶．唵，悉殿都．漫多囉．跋陀耶，娑婆訶．', 1);
 
 -- --------------------------------------------------------
 
@@ -137,7 +139,8 @@ INSERT INTO `menu` (`id`, `text`, `href`, `sh`, `menu_id`) VALUES
 (30, '44444', '444', 1, 10),
 (31, '55555', '555', 1, 10),
 (32, '66666', '666', 1, 10),
-(33, '更多內容', '?do=news', 1, 2);
+(33, '更多內容', '?do=news', 1, 2),
+(34, '加入佛教', 'index.php?do=join', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -157,9 +160,14 @@ CREATE TABLE `mvim` (
 
 INSERT INTO `mvim` (`id`, `img`, `sh`) VALUES
 (2, '01C04.gif', 0),
-(3, '01C05.gif', 1),
-(4, '01C02.gif', 1),
-(5, '01C06.gif', 1);
+(3, '01C05.gif', 0),
+(4, '01C02.gif', 0),
+(5, '01C06.gif', 0),
+(6, '01C03.gif', 0),
+(7, '01.jpg', 1),
+(8, '02.jpg', 1),
+(9, '03.jpg', 1),
+(10, '04.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -208,11 +216,15 @@ CREATE TABLE `titles` (
 --
 
 INSERT INTO `titles` (`id`, `img`, `text`, `sh`) VALUES
-(3, '01B02.jpg', 'AAAAAAAAAAA', 1),
+(3, '01B02.jpg', 'AAAAAAAAAAA', 0),
 (4, '01B03.jpg', 'dsfa', 0),
 (5, '01B01.jpg', 'fadfsaf', 0),
 (6, '01B04.jpg', '', 0),
-(7, '01B01.jpg', '11', 0);
+(7, '01B01.jpg', '11', 0),
+(8, '01C01.gif', '111', 0),
+(11, 'mix.png', '01', 1),
+(13, '01.jpg', '123123', 0),
+(14, '01B01.jpg', '1111', 0);
 
 -- --------------------------------------------------------
 
@@ -230,7 +242,7 @@ CREATE TABLE `total` (
 --
 
 INSERT INTO `total` (`id`, `total`) VALUES
-(1, 5006);
+(1, 5022);
 
 --
 -- 已傾印資料表的索引
@@ -298,7 +310,7 @@ ALTER TABLE `total`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `ad`
 --
 ALTER TABLE `ad`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `admin`
@@ -322,13 +334,13 @@ ALTER TABLE `image`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `mvim`
 --
 ALTER TABLE `mvim`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `news`
@@ -340,7 +352,7 @@ ALTER TABLE `news`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `titles`
 --
 ALTER TABLE `titles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `total`
