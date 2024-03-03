@@ -13,7 +13,7 @@
             <?php
             $lins = $Mvim->all(['sh' => 1]);
             foreach ($lins as $lin) {
-                echo "lin.push('{$lin['img']}');";
+                echo "lin.push('{$lin['img']}');";//往上12行陣列塞進去所有圖
             }
 
             ?>
