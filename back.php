@@ -101,7 +101,23 @@ if(!isset($_SESSION['login'])){//如果沒有session紀錄登入，飛回首頁�
 				?>
 				<!-- ---back-back end-- -->
 			</div>
-			
+			<div id="alt" style="position: absolute; width: 350px; min-height: 100px; word-break:break-all; text-align:justify;  background-color: rgb(255, 255, 204); top: 50px; left: 400px; z-index: 99; display: none; padding: 5px; border: 3px double rgb(255, 153, 0); background-position: initial initial; background-repeat: initial initial;"></div>
+			<script>
+				$(".sswww").hover(
+					function() {
+						$("#alt").html("" + $(this).children(".all").html() + "").css({
+							"top": $(this).offset().top - 50
+						})
+						$("#alt").show()
+					}
+				)
+				$(".sswww").mouseout(
+					function() {
+						$("#alt").hide()
+					}
+				)
+			</script>
+			</div>
 		<div style="clear:both;"></div>
 		<div style="width:1024px; left:0px; position:relative; background:#FC3; margin-top:4px; height:123px; display:block;">
 			<span class="t" style="line-height:123px;"><?=$Bottom->find(1)['bottom'];?></span>

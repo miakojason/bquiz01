@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2024-01-10 00:58:25
+-- 產生時間： 2024-03-23 12:06:00
 -- 伺服器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.2.12
 
@@ -106,7 +106,8 @@ INSERT INTO `image` (`id`, `img`, `sh`) VALUES
 (7, '01D07.jpg', 1),
 (8, '01D01.jpg', 1),
 (11, '01D01.jpg', 1),
-(12, '01D09.jpg', 1);
+(12, '01D09.jpg', 1),
+(13, '01D10.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -129,8 +130,8 @@ CREATE TABLE `menu` (
 INSERT INTO `menu` (`id`, `text`, `href`, `sh`, `menu_id`) VALUES
 (1, '管理登入', 'index.php?do=login', 1, 0),
 (2, '網站首頁', 'index.php', 1, 0),
-(4, 'AAA', 'BBB', 0, 0),
-(10, 'bbb', 'bb', 0, 0),
+(4, 'AAA', 'BBB', 1, 0),
+(10, 'bbb', 'bb', 1, 0),
 (27, '1111111', '1111', 1, 10),
 (28, '22222', '222', 1, 10),
 (29, '33333', '333', 1, 10),
@@ -157,9 +158,12 @@ CREATE TABLE `mvim` (
 
 INSERT INTO `mvim` (`id`, `img`, `sh`) VALUES
 (2, '01C04.gif', 0),
-(3, '01C05.gif', 1),
-(4, '01C02.gif', 1),
-(5, '01C06.gif', 1);
+(12, '01C01.gif', 1),
+(13, '01C02.gif', 1),
+(14, '01C03.gif', 1),
+(15, '01C04.gif', 1),
+(16, '01C05.gif', 1),
+(17, '01C06.gif', 1);
 
 -- --------------------------------------------------------
 
@@ -209,10 +213,11 @@ CREATE TABLE `titles` (
 
 INSERT INTO `titles` (`id`, `img`, `text`, `sh`) VALUES
 (3, '01B02.jpg', 'AAAAAAAAAAA', 1),
-(4, '01B03.jpg', 'dsfa', 0),
-(5, '01B01.jpg', 'fadfsaf', 0),
-(6, '01B04.jpg', '', 0),
-(7, '01B01.jpg', '11', 0);
+(4, '01B03.jpg', '2', 0),
+(5, '01B01.jpg', '2', 0),
+(6, '01B04.jpg', '3', 0),
+(7, '01B01.jpg', '4', 0),
+(9, '01B03.jpg', '234', 0);
 
 -- --------------------------------------------------------
 
@@ -230,7 +235,7 @@ CREATE TABLE `total` (
 --
 
 INSERT INTO `total` (`id`, `total`) VALUES
-(1, 5006);
+(1, 5012);
 
 --
 -- 已傾印資料表的索引
@@ -316,7 +321,7 @@ ALTER TABLE `bottom`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `image`
 --
 ALTER TABLE `image`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `menu`
@@ -328,7 +333,7 @@ ALTER TABLE `menu`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `mvim`
 --
 ALTER TABLE `mvim`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `news`
@@ -340,7 +345,7 @@ ALTER TABLE `news`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `titles`
 --
 ALTER TABLE `titles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `total`
